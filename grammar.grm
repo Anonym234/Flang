@@ -1,0 +1,19 @@
+%START code
+%DIRECTIVE ksljdfkl
+
+<code> := <statement> ";" <code>
+<code> := <statement>
+
+// statements
+<statement> := %empty
+<statement> := <declaration>
+<statement> := <expression>
+<statement> := "{" <code> "}"
+
+<declaration> := <type> <identifier>
+
+<type> := "let"
+
+<expression> := %literal{string}
+<expression> := %literal{string}
+<expression> := <identifier>
